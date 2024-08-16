@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abcdário Divertido</title>
+    <!--Css link-->
+    <link rel="stylesheet" href="../css/secondaryScreen.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Video Galery</h1>
+
+        <div class="video-container">
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+        </div>
+        <div class="popup-video">
+            <span>&times;</span>
+            <video src="../videos/ZiggsTeste.mp4" autoplay controls></video>
+        </div>
+    </div>
+    <script>
+        /* document.querySelectorAll('.video-container video').forEach(vid => {
+             vid.onclick = () => {
+                 document.querySelector('.popup-video').style.display = 'block';
+                 document.querySelector('.popup-video video').src = vid.getAttribute('src');
+             }
+         });
+ 
+         document.querySelector('.popup-video span').onclick = () => {
+            
+             document.querySelector('.popup-video').style.display = 'none';
+         }*/
+
+        // Evento de clique nos vídeos da galeria
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+                const popup = document.querySelector('.popup-video');
+                const popupVideo = popup.querySelector('video');
+
+                // Defina a URL do vídeo do popup para o URL do vídeo clicado
+                popupVideo.src = vid.getAttribute('src');
+
+                // Exiba o popup
+                popup.style.display = 'flex'; // Use 'flex' para centralizar o vídeo
+                popupVideo.play(); // Inicie o vídeo
+            }
+        });
+
+        // Evento de clique no botão de fechar
+        document.querySelector('.popup-video span').onclick = () => {
+            const popup = document.querySelector('.popup-video');
+            const popupVideo = popup.querySelector('video');
+
+            // Pause o vídeo
+            popupVideo.pause();
+
+            // Oculte o popup
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
