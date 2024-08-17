@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alfabeto em Libras</title>
     <link rel="stylesheet" href="../css/primaryScreen.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>  
+    <header>
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper>
@@ -25,7 +26,8 @@
         <nav class="desenvolvido">
             <a href="index.html">
                 <ul class="menu">
-                    <img src="C:\Users\isame\OneDrive\Documentos\MeuPc\TARUGA\Ultimo backup do ano(09-12)\Ultimo backup do ano(09-12)\htdocs\TARUGA\taruga\Imagens\turtle.png" alt="logozinho de uma tartaruga">
+                    <img src="C:\Users\isame\OneDrive\Documentos\MeuPc\TARUGA\Ultimo backup do ano(09-12)\Ultimo backup do ano(09-12)\htdocs\TARUGA\taruga\Imagens\turtle.png"
+                        alt="logozinho de uma tartaruga">
                 </ul>
             </a>
 
@@ -35,18 +37,24 @@
         </nav>
     </header>
     <div class="divTitulo">
-        <h1>Vamos agora observar o alfabeto!</h1>
+        <h1>Vamos observar o alfabeto!?</h1>
     </div>
 
     <div class="container">
         <div class="video-container">
-            <div class="video"><video src="../videos/Alfabeto Completo.mp4" controls></video></div>
+            <div id="videoElement" class="video"><video src="../videos/Alfabeto Completo.mp4" controls></video></div>
         </div>
     </div>
     <div class="divButton">
-        <button>Continuar</button>
+        <button id="continueButton">Continuar</button>
     </div>
-   
+    <script>
+        const continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', () => {
+            window.location.href = '../html/secondaryScreen.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
+    </script>
 </body>
+
 
 </html>

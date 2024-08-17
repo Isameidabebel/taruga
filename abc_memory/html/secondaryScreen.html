@@ -10,26 +10,86 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Video Galery</h1>
+    <header>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 
+        <nav class="desenvolvido">
+            <a href="index.html">
+                <ul class="menu">
+                    <img src="C:\Users\isame\OneDrive\Documentos\MeuPc\TARUGA\Ultimo backup do ano(09-12)\Ultimo backup do ano(09-12)\htdocs\TARUGA\taruga\Imagens\turtle.png"
+                        alt="logozinho de uma tartaruga">
+                </ul>
+            </a>
+
+            <div class="desenvolvido-letras">
+                Desenvolvido por<strong>Beemay</strong>
+            </div>
+        </nav>
+    </header>
+    <div class="divTitulo">
+        <h1>Vamos agora observar as letras!</h1>
+    </div>
+    <div class="container">
         <div class="video-container">
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
-            <div class="video"><video src="../videos/ZiggsTeste.mp4" controls></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+            <div class="video"><video src="../videos/ZiggsTeste.mp4"></video></div>
+
         </div>
         <div class="popup-video">
             <span>&times;</span>
             <video src="../videos/ZiggsTeste.mp4" autoplay controls></video>
         </div>
     </div>
+    <div class="divButton">
+        <button id="backButton" class="cssButtons">Voltar</button>
+        <button id="continueButton" class="cssButtons">Continuar</button>
+    </div>
+
     <script>
+        const continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', () => {
+            window.location.href = '../html/secondaryScreen.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
+
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', () => {
+            window.location.href = './primaryScreen.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
         /* document.querySelectorAll('.video-container video').forEach(vid => {
              vid.onclick = () => {
                  document.querySelector('.popup-video').style.display = 'block';
