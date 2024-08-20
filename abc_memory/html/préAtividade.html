@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instruções para atividade</title>
+    <!--Css link-->
+    <link rel="stylesheet" href="../css/préAtividade.css">
+    <!--API link-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
+
 <body>
-    
+    <header>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <nav class="desenvolvido">
+            <a href="index.html">
+                <ul class="menu">
+                    <img src="C:\Users\isame\OneDrive\Documentos\MeuPc\TARUGA\Ultimo backup do ano(09-12)\Ultimo backup do ano(09-12)\htdocs\TARUGA\taruga\Imagens\turtle.png"
+                        alt="logozinho de uma tartaruga">
+                </ul>
+            </a>
+            <div class="desenvolvido-letras">
+                Desenvolvido por<strong>Beemay</strong>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img class="imgSlider" src="../imgs/GifBack.gif" alt="Foto 01">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="./img/foto_02.png" alt="Foto 02">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="./img/foto_03.png" alt="Foto 03">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="./img/foto_03.png" alt="Foto 03">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="./img/foto_03.png" alt="Foto 03">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../JS/carroussel.js"></script>
 </body>
+
 </html>
