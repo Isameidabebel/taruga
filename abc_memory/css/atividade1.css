@@ -2,7 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    background-image: linear-gradient(to left, rgb(239, 255, 182),rgb(198, 238, 194), rgb(127, 252, 116));
+    background-image: linear-gradient(to left, rgb(239, 255, 182), rgb(198, 238, 194), rgb(127, 252, 116));
     background-size: 500% 100%;
     animation: degrade-animado 5s infinite alternate;
 }
@@ -67,9 +67,10 @@ header {
     animation-timing-function: ease-in-out;
     box-shadow: 1px rgba(40, 216, 113, 0.5);
 }
+
 /*Fim cabeçalho*/
 /*Inicio Divs*/
-.container{
+.container {
     width: 100%;
     height: 600px;
     display: flex;
@@ -79,7 +80,7 @@ header {
     margin-bottom: 15px;
 }
 
-.containerGame{
+.containerGame {
     width: 70%;
     height: 100%;
     display: flex;
@@ -87,7 +88,7 @@ header {
     justify-content: center;
 }
 
-.containerCheck{
+.containerCheck {
     width: 30%;
     height: 100%;
     display: flex;
@@ -95,7 +96,7 @@ header {
     justify-content: center;
 }
 
-.backGame{
+.backGame {
     background: rgb(228, 218, 165);
     border-radius: 25px;
     height: 92%;
@@ -105,7 +106,7 @@ header {
     margin-left: 45px;
 }
 
-.divTitulo{
+.divTitulo {
     width: 100%;
     height: 90px;
     display: flex;
@@ -115,7 +116,7 @@ header {
     margin-top: 15px;
 }
 
-.divTitulo p{
+.divTitulo p {
     width: 600px;
     height: 48px;
     background: #36C299;
@@ -128,7 +129,7 @@ header {
     border: 2px #fff solid;
 }
 
-.divTitulo strong{
+.divTitulo strong {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,7 +138,7 @@ header {
     margin-left: 10px;
 }
 
-.gridCards{
+.gridCards {
     height: 350px;
     width: 100%;
     align-items: center;
@@ -147,7 +148,7 @@ header {
     gap: 35px;
 }
 
-.cards{
+.cards {
     background: rgb(239, 254, 150);
     width: 220px;
     height: 280px;
@@ -161,16 +162,16 @@ header {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.80);
 }
 
-.cards:hover{
+.cards:hover {
     transform: scale(1.1);
     transition: all 300ms ease-out;
 }
 
-.cards:not(hover){
+.cards:not(hover) {
     transition: all 300ms ease-out;
 }
 
-.cards img{
+.cards img {
     width: 100%;
     height: 100%;
 }
@@ -182,7 +183,7 @@ header {
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 .cssButtons {
@@ -217,7 +218,15 @@ header {
     transition: 0.3s;
     border: 2px solid #fff;
 }
+
 /*Fim Buttons*/
+/*Desativar os outros cards*/
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+
 
 /*Keyframes*/
 /*Faz o botão ficar em uma animação de loop que aumenta e diminui ele: */
@@ -230,6 +239,7 @@ header {
         transform: scale(1.2);
     }
 }
+
 /*Animação do background*/
 @keyframes degrade-animado {
     0% {
