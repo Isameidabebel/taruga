@@ -8,7 +8,7 @@
     <!--Css link-->
     <link rel="stylesheet" href="../css/préAtividade.css">
     <!--API link-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -38,9 +38,9 @@
     <div class="divTitulo">
         <h1>Pondo em prática</h1>
     </div>
-    
+
     <main>
-        
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -86,6 +86,12 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../JS/carroussel.js"></script>
+    <script>
+        const continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', () => {
+            window.location.href = 'atividade1.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
+    </script>
 </body>
 
 </html>

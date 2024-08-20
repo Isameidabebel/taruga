@@ -34,17 +34,17 @@
         <div class="containerGame">
             <div class="backGame">
                 <div class="divTitulo">
-                    <p>Encontre a carta que representa a letra: <strong>C</strong></p>
+                    <p>Encontre a carta que representa a letra: <strong>A</strong></p>
                 </div>
                 <div class="gridCards">
-                    <div class="cards"  onclick="handleClick()">
-
+                    <div class="cards"  onclick="imagemCerta()">
+                        <img src="../imgs/aLibras.jpg" alt="">
                     </div>
-                    <div class="cards">
-                        
+                    <div class="cards" onclick="imagemErrada()">
+                        <img src="../imgs/cLibras.jpg" alt="">
                     </div>
-                    <div class="cards">
-                        
+                    <div class="cards" onclick="imagemErrada()">
+                        <img src="../imgs/bLibras.jpg" alt="">
                     </div>
                 </div>
                 <div class="divButton">
@@ -53,13 +53,21 @@
             </div>
         </div>
         <div class="containerCheck">
-           <img src="../imgs/Duvida.png" alt="">
+           <img id="imagemMuda" src="../imgs/Duvida.png" alt="">
         </div>
     </div>
     <script>
-        function handleClick() {
-          alert('Div clicada!');
-        }
+        function imagemCerta() {
+            var img = document.getElementById('imagemMuda');
+            img.src = '../imgs/Certo.png'; // Substitua pelo caminho da nova imagem
+
+            //Desativar os outros cards, editar as imagens, adicionar 1 ponto em alguma variável
+        } 
+
+        function imagemErrada() {
+            var img = document.getElementById('imagemMuda');
+            img.src = '../imgs/Errado.png'; // Substitua pelo caminho da nova imagem
+        } 
       </script>
 </body>
 </html>
