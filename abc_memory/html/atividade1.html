@@ -37,7 +37,7 @@
                     <p>Encontre a carta que representa a letra: <strong>C</strong></p>
                 </div>
                 <div class="gridCards">
-                    <div class="cards">
+                    <div class="cards"  onclick="handleClick()">
 
                     </div>
                     <div class="cards">
@@ -53,9 +53,13 @@
             </div>
         </div>
         <div class="containerCheck">
-           
+           <img src="../imgs/Duvida.png" alt="">
         </div>
     </div>
-    
+    <script>
+        function handleClick() {
+          alert('Div clicada!');
+        }
+      </script>
 </body>
 </html>

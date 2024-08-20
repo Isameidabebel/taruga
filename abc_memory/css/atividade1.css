@@ -88,7 +88,9 @@ header {
 .containerCheck{
     width: 30%;
     height: 100%;
-    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .backGame{
@@ -140,6 +142,7 @@ header {
     height: 280px;
     border-radius: 25px;
     border: #fff 2px solid;
+    cursor: pointer;
 }
 
 /*Button*/
