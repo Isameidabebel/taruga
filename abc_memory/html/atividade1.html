@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 1</title>
     <link rel="stylesheet" href="../css/atividade1.css">
 </head>
-<body>
+
+<body id="background">
     <header>
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
@@ -37,13 +39,13 @@
                     <p>Encontre a carta que representa a letra: <strong>A</strong></p>
                 </div>
                 <div class="gridCards">
-                    <div class="cards"  onclick="imagemCerta()">
+                    <div id="card1" class="cards" onclick="verificarEscolha(this.id)">
                         <img src="../imgs/aLibras.jpg" alt="">
                     </div>
-                    <div class="cards" onclick="imagemErrada()">
+                    <div id="card2" class="cards" onclick="verificarEscolha(this.id)">
                         <img src="../imgs/cLibras.jpg" alt="">
                     </div>
-                    <div class="cards" onclick="imagemErrada()">
+                    <div id="card3" class="cards" onclick="verificarEscolha(this.id)">
                         <img src="../imgs/bLibras.jpg" alt="">
                     </div>
                 </div>
@@ -53,21 +55,51 @@
             </div>
         </div>
         <div class="containerCheck">
-           <img id="imagemMuda" src="../imgs/Duvida.png" alt="">
+            <img id="imagem" src="../imgs/Duvida.png" alt="">
         </div>
     </div>
     <script>
-        function imagemCerta() {
-            var img = document.getElementById('imagemMuda');
-            img.src = '../imgs/Certo.png'; // Substitua pelo caminho da nova imagem
+        let pontos = 0;
 
-            //Desativar os outros cards, editar as imagens, adiconar um valor em uma variavel
-        } 
+        // Define o card correto (por exemplo, 'card2')
+        const cardCorreto = 'card1';
 
-        function imagemErrada() {
-            var img = document.getElementById('imagemMuda');
-            img.src = '../imgs/Errado.png'; // Substitua pelo caminho da nova imagem
-        } 
-      </script>
+        function verificarEscolha(cardId) {
+            const imagem = document.getElementById('imagem');
+            const background = document.getElementById('background');
+
+            if (cardId === cardCorreto) {
+                pontos += 1;
+                console.log('Pontos:', pontos);
+                alert('Você escolheu o card certo! Pontos: ' + pontos);
+
+                // Muda a imagem para a correta
+                imagem.src = '../imgs/Certo.png';
+                background.style.background = 'green';
+
+            } else {
+                alert('Você escolheu o card errado. Tente novamente.');
+
+                // Muda a imagem para a errada
+                imagem.src = '../imgs/Errado.png';
+                background.style.background = 'red';
+            }
+
+            // Desativa o evento onclick de todos os cards
+            desativarCards();
+        }
+
+        function desativarCards() {
+            const cards = document.getElementsByClassName('cards');
+
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].classList.add('inactive');
+                cards[i].onclick = null;
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>

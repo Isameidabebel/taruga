@@ -67,8 +67,8 @@ header {
     animation-timing-function: ease-in-out;
     box-shadow: 1px rgba(40, 216, 113, 0.5);
 }
-
 /*Fim cabeçalho*/
+
 /*Inicio Divs*/
 .container {
     width: 100%;
@@ -149,7 +149,7 @@ header {
 }
 
 .cards {
-    background: rgb(239, 254, 150);
+    background: rgb(68, 69, 64);
     width: 220px;
     height: 280px;
     border-radius: 25px;
@@ -220,14 +220,13 @@ header {
 }
 
 /*Fim Buttons*/
+
 /*Desativar os outros cards*/
-.disabled-card {
-    filter: saturate(0);
-    opacity: 0.5;
-}
-
-
-
+.inactive {
+    cursor: not-allowed;
+    pointer-events: none; /* Desativa os cliques */
+    filter: opacity(60%);
+  }
 /*Keyframes*/
 /*Faz o botão ficar em uma animação de loop que aumenta e diminui ele: */
 @keyframes botao {
