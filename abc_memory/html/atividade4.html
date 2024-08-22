@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 2</title>
     <link rel="stylesheet" href="../css/atividadesPadrao.css">
 </head>
 
@@ -35,17 +35,17 @@
         <div class="containerGame">
             <div class="backGame">
                 <div class="divTitulo">
-                    <p id="containerTitulo">Encontre a carta que representa a letra: <strong>A</strong></p>
+                    <p id="containerTitulo">Encontre a carta que representa a letra: <strong>M</strong></p>
                 </div>
                 <div class="gridCards">
                     <div id="card1" class="cards" onclick="verificarEscolha(this.id)">
-                        <img src="../imgs/aLibras.jpg" alt="">
+                        <img src="../imgs/lLibras.jpg" alt="">
                     </div>
                     <div id="card2" class="cards" onclick="verificarEscolha(this.id)">
-                        <img src="../imgs/cLibras.jpg" alt="">
+                        <img src="../imgs/mLibras.jpg" alt="">
                     </div>
                     <div id="card3" class="cards" onclick="verificarEscolha(this.id)">
-                        <img src="../imgs/bLibras.jpg" alt="">
+                        <img src="../imgs/nLibras.jpg" alt="">
                     </div>
                 </div>
                 <div class="divButton">
@@ -68,12 +68,12 @@
         //Mudar de pag com o button continuar
         const continueButton = document.getElementById('continueButton');
         continueButton.addEventListener('click', () => {
-            window.location.href = 'atividade2.html'; // Substitua 'outraPagina.html' pela URL desejada
+            window.location.href = 'atividade5.html'; // Substitua 'outraPagina.html' pela URL desejada
         });
 
         //Lógica dos cards + fade
-        let pontos1 = 0;
-        const cardCorreto = 'card1';
+        let pontos4 = 0;
+        const cardCorreto = 'card2';
 
         function verificarEscolha(cardId) {
             const imagem = document.getElementById('imagem');
@@ -85,12 +85,11 @@
 
             setTimeout(() => {
                 if (cardId === cardCorreto) {
-                    pontos1 += 1;
+                    pontos4 += 1;
                     imagem.src = '../imgs/Certo.png';
                     titulo.textContent = 'Parabéns você acertou!';
                     titulo.style.color = '#11ce00';
                     cT.textContent = 'Vamos para próxima atividade, clique em continuar';
-                    //alert('Sua pontuação total é: ' + pontos1);
                 } else {
                     imagem.src = '../imgs/Errado.png';
                     titulo.textContent = 'Que pena parece que você errou!';

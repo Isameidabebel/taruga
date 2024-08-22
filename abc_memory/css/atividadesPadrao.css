@@ -1,3 +1,23 @@
+/* Adiciona uma transição de opacidade às imagens */
+img {
+    transition: opacity 0.5s ease;
+}
+
+/* Classe para aplicar fade-out na imagem */
+.fade-out {
+    opacity: 0;
+}
+
+/* Adiciona uma transição de opacidade ao título */
+.containerH1 h1 {
+    transition: opacity 0.5s ease, color 0.5s ease, font-size 0.5s ease;
+}
+
+/* Classe para aplicar fade-out no título */
+.fade-out-title {
+    opacity: 0;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -67,6 +87,7 @@ header {
     animation-timing-function: ease-in-out;
     box-shadow: 1px rgba(40, 216, 113, 0.5);
 }
+
 /*Fim cabeçalho*/
 
 /*Inicio Divs*/
@@ -91,9 +112,33 @@ header {
 .containerCheck {
     width: 30%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ccImg {
+    width: 100%;
+    height: 68%;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+}
+
+.containerImg {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+}
+
+.containerH1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
 }
 
 .backGame {
@@ -150,7 +195,7 @@ header {
 
 .cards {
     background: rgb(68, 69, 64);
-    width: 220px;
+    width: 230px;
     height: 280px;
     border-radius: 25px;
     border: #000 1px solid;
@@ -224,9 +269,11 @@ header {
 /*Desativar os outros cards*/
 .inactive {
     cursor: not-allowed;
-    pointer-events: none; /* Desativa os cliques */
+    pointer-events: none;
+    /* Desativa os cliques */
     filter: opacity(60%);
-  }
+}
+
 /*Keyframes*/
 /*Faz o botão ficar em uma animação de loop que aumenta e diminui ele: */
 @keyframes botao {
