@@ -4,74 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ache os Ollies</title>
+    <title>Ache as letras!</title>
     <link rel="stylesheet" href="../css/teste.css">
 </head>
 
 <body>
     <div class="game-container">
-        <div id="message">Encontre todos os 5 Ollies!</div>
         <div class="image-container">
-            <img src="background.jpg" alt="Cenário do jogo">
-            <!-- 5 Ollies serão posicionados aqui -->
-            <div class="ollie"></div>
-            <div class="ollie"></div>
-            <div class="ollie"></div>
-            <div class="ollie"></div>
-            <div class="ollie"></div>
+            <img src="../imgs/testeG.png" alt="Cenário do jogo">
+            <!-- 5 letras serão posicionados aqui -->
+            <div class="letra"><img src="../imgs/aLibras.jpg" alt=""></div>
+            <div class="letra"><img src="../imgs/iLibras.jpg" alt=""></div>
+            <div class="letra"><img src="../imgs/oLibras.jpg" alt=""></div>
+            <div class="letra"><img src="../imgs/uLibras.jpg" alt=""></div>
+            <div class="letra"><img src="../imgs/eLibras.jpg" alt=""></div>
         </div>
     </div>
 
-    <!-- Elemento centralizado para mostrar o Ollie encontrado -->
-    <div id="center-ollie"></div>
-    <div id="congratulations-message">Parabéns! Você encontrou todos os 5 Ollies!</div>
+    <!-- Elemento centralizado para mostrar o letra encontrado -->
+    <div id="center-letra"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const ollies = document.querySelectorAll('.ollie');
-            const message = document.getElementById('message');
-            const centerOllie = document.getElementById('center-ollie');
-            const congratulationsMessage = document.getElementById('congratulations-message');
+            const letras = document.querySelectorAll('.letra');
+            const centerletra = document.getElementById('center-letra');
             const imageContainer = document.querySelector('.image-container');
-            let foundOllies = 0;
+            let foundLetras = 0;
 
-            ollies.forEach(ollie => {
-                // Posicionar Ollie de forma aleatória dentro do contêiner
-                const maxX = imageContainer.offsetWidth - ollie.offsetWidth;
-                const maxY = imageContainer.offsetHeight - ollie.offsetHeight;
+            letras.forEach(letra => {
+                // Posicionar letra de forma aleatória dentro do contêiner
+                const maxX = imageContainer.offsetWidth - letra.offsetWidth;
+                const maxY = imageContainer.offsetHeight - letra.offsetHeight;
                 const randomX = Math.floor(Math.random() * maxX);
                 const randomY = Math.floor(Math.random() * maxY);
 
-                ollie.style.left = `${randomX}px`;
-                ollie.style.top = `${randomY}px`;
-                ollie.style.display = 'block';
+                letra.style.left = `${randomX}px`;
+                letra.style.top = `${randomY}px`;
+                letra.style.display = 'block';
 
-                // Lógica para quando Ollie for encontrado
-                ollie.addEventListener('click', () => {
-                    // Mostrar Ollie no centro da tela com animação
-                    centerOllie.style.display = 'block';
-                    centerOllie.style.backgroundImage = `url('ollie.png')`;
-                    centerOllie.style.animation = 'zoomOut 1s forwards';
+                // Lógica para quando letra for encontrado
+                letra.addEventListener('click', () => {
+                    console.log('letra clicado:', letra);
 
-                    // Esconder o Ollie do cenário
-                    ollie.style.display = 'none';
+                    // Obter a URL da imagem clicada
+                    const letraImg = letra.querySelector('img').src;
 
-                    // Incrementar contador
-                    foundOllies++;
+                    // Cria um novo elemento de imagem para garantir que a imagem seja carregada antes de definir o fundo
+                    const img = new Image();
+                    img.src = letraImg;
 
-                    // Após a animação, esconder Ollie centralizado
-                    setTimeout(() => {
-                        centerOllie.style.display = 'none';
-                    }, 1000);
+                    img.onload = () => {
+                        // Mostrar letra no centro da tela com animação
+                        centerletra.style.backgroundImage = `url('${letraImg}')`;
+                        centerletra.style.display = 'block';
+                        centerletra.style.animation = 'zoomOut 1s forwards';
 
-                    // Verificar se todos os Ollies foram encontrados
-                    if (foundOllies === 5) {
-                        message.style.display = 'none';
-                        congratulationsMessage.style.display = 'block';
-                    }
+                        // Esconder o letra do cenário
+                        letra.style.display = 'none';
+
+                        // Incrementar contador
+                        foundLetras++;
+
+                        // Após a animação, esconder letra centralizado
+                        setTimeout(() => {
+                            centerletra.style.display = 'none';
+                        }, 1000);
+
+                        // Verificar se todos os letras foram encontrados
+                        if (foundLetras === 5) {
+                            console.log('Todos os letras foram encontrados! Redirecionando...');
+                            setTimeout(() => {
+                                window.location.href = '../html/parabens.html';
+                            }, 1000); // Delay para garantir que a animação termine
+                        }
+                    };
                 });
             });
         });
+
     </script>
 </body>
 
