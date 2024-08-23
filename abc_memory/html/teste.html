@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ache os Ollies</title>
+    <link rel="stylesheet" href="../css/teste.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="message">Encontre todos os 5 Ollies!</div>
+        <div class="image-container">
+            <img src="background.jpg" alt="Cenário do jogo">
+            <!-- 5 Ollies serão posicionados aqui -->
+            <div class="ollie"></div>
+            <div class="ollie"></div>
+            <div class="ollie"></div>
+            <div class="ollie"></div>
+            <div class="ollie"></div>
+        </div>
+    </div>
+
+    <!-- Elemento centralizado para mostrar o Ollie encontrado -->
+    <div id="center-ollie"></div>
+    <div id="congratulations-message">Parabéns! Você encontrou todos os 5 Ollies!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ollies = document.querySelectorAll('.ollie');
+            const message = document.getElementById('message');
+            const centerOllie = document.getElementById('center-ollie');
+            const congratulationsMessage = document.getElementById('congratulations-message');
+            const imageContainer = document.querySelector('.image-container');
+            let foundOllies = 0;
+
+            ollies.forEach(ollie => {
+                // Posicionar Ollie de forma aleatória dentro do contêiner
+                const maxX = imageContainer.offsetWidth - ollie.offsetWidth;
+                const maxY = imageContainer.offsetHeight - ollie.offsetHeight;
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+
+                ollie.style.left = `${randomX}px`;
+                ollie.style.top = `${randomY}px`;
+                ollie.style.display = 'block';
+
+                // Lógica para quando Ollie for encontrado
+                ollie.addEventListener('click', () => {
+                    // Mostrar Ollie no centro da tela com animação
+                    centerOllie.style.display = 'block';
+                    centerOllie.style.backgroundImage = `url('ollie.png')`;
+                    centerOllie.style.animation = 'zoomOut 1s forwards';
+
+                    // Esconder o Ollie do cenário
+                    ollie.style.display = 'none';
+
+                    // Incrementar contador
+                    foundOllies++;
+
+                    // Após a animação, esconder Ollie centralizado
+                    setTimeout(() => {
+                        centerOllie.style.display = 'none';
+                    }, 1000);
+
+                    // Verificar se todos os Ollies foram encontrados
+                    if (foundOllies === 5) {
+                        message.style.display = 'none';
+                        congratulationsMessage.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
