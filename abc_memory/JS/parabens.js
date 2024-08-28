@@ -1,4 +1,4 @@
-import { pontos1 } from './atividade1.js';
+import '../JS/atividade1';
 
 const button = document.getElementById('teste');
 const h1 = document.getElementById('h1');
