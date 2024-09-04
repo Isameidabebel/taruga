@@ -1,8 +1,13 @@
-import '../JS/atividade1';
+document.addEventListener('DOMContentLoaded', () => {
+    const atividades = ['atividade1'];
+    let totalPoints = 0;
 
-const button = document.getElementById('teste');
-const h1 = document.getElementById('h1');
+    // Iterar sobre cada atividade e somar os pontos
+    for (let i = 0; i < atividades.length; i++) {
+        let pontos = parseInt(localStorage.getItem(atividades[i])) || 0;
+        totalPoints += pontos;
+    }
 
-button.addEventListener('click', () => {
-    h1.textContent = 'Sua pontuação total é: ' + pontos1;
+    // Exibir o resultado
+    alert(`Sua pontuação total é: ${totalPoints}`);
 });
