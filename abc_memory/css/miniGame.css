@@ -69,7 +69,14 @@ video {
 .letra {
     position: absolute;
     cursor: pointer;
-    /* Adicione estilos adicionais conforme necessário */
+   
+}
+
+.letra img{
+    height: 45px;
+    width: 45px;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
 .game-container {
