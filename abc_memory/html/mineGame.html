@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Letras e Vídeos</title>
     <link rel="stylesheet" href="../css/miniGame.css">
 </head>
-<body>
-    <!-- Imagem de fundo com letras -->
-    <div class="letra" data-video="../videos/A.mp4">
-        <img src="../imgs/aLibras.jpg" alt="Letra A">
-    </div>
-    <div class="letra" data-video="../videos/E.mp4">
-        <img src="../imgs/eLibras.jpg" alt="Letra E">
-    </div>
-    <div class="letra" data-video="../videos/I.mp4">
-        <img src="../imgs/iLibras.jpg" alt="Letra I">
-    </div>
-    <div class="letra" data-video="../videos/O.mp4">
-        <img src="../imgs/oLibras.jpg" alt="Letra O">
-    </div>
-    <div class="letra" data-video="../videos/U.mp4">
-        <img src="../imgs/uLibras.jpg" alt="Letra U">
-    </div>
 
+<body>
+    <div class="conatinar">
+        <div class="game-container">
+            <img src="../imgs/1.png" alt="Imagem de fundo" class="background-image">
+            <div class="letra" data-video="../videos/A.mp4">
+                <img src="../imgs/aLibras.jpg" alt="Letra A">
+            </div>
+            <div class="letra" data-video="../videos/E.mp4">
+                <img src="../imgs/eLibras.jpg" alt="Letra E">
+            </div>
+            <div class="letra" data-video="../videos/I.mp4">
+                <img src="../imgs/iLibras.jpg" alt="Letra I">
+            </div>
+            <div class="letra" data-video="../videos/O.mp4">
+                <img src="../imgs/oLibras.jpg" alt="Letra O">
+            </div>
+            <div class="letra" data-video="../videos/U.mp4">
+                <img src="../imgs/uLibras.jpg" alt="Letra U">
+            </div>
+        </div>
+    </div>
     <!-- Contêiner do vídeo -->
     <div class="video-container" id="video-container">
         <button class="close-btn" id="close-btn">&times;</button>
@@ -32,4 +37,5 @@
 
     <script src="../JS/miniGame.js"></script>
 </body>
+
 </html>
