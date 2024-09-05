@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Letras e Vídeos</title>
+    <link rel="stylesheet" href="../css/miniGame.css">
+</head>
+<body>
+    <!-- Imagem de fundo com letras -->
+    <div class="letra" data-video="video1.mp4">
+        <img src="letra1.png" alt="Letra 1">
+    </div>
+    <div class="letra" data-video="video2.mp4">
+        <img src="letra2.png" alt="Letra 2">
+    </div>
+    <div class="letra" data-video="video3.mp4">
+        <img src="letra3.png" alt="Letra 3">
+    </div>
+    <div class="letra" data-video="video4.mp4">
+        <img src="letra4.png" alt="Letra 4">
+    </div>
+    <div class="letra" data-video="video5.mp4">
+        <img src="letra5.png" alt="Letra 5">
+    </div>
+    <div class="letra" data-video="video6.mp4">
+        <img src="letra6.png" alt="Letra 6">
+    </div>
+
+    <!-- Contêiner do vídeo -->
+    <div class="video-container" id="video-container">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <video id="video-player" controls></video>
+    </div>
+
+    <script src="../JS/miniGame.js"></script>
+</body>
+</html>

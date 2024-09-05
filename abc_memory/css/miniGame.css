@@ -1,0 +1,77 @@
+/* Animação de aparecimento do vídeo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Leve escala para efeito de zoom in */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de desaparecimento do vídeo */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9); /* Leve escala para efeito de zoom out */
+    }
+}
+
+.video-container {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 0.5s ease-in-out; /* Animação de aparecimento */
+}
+
+.video-container.show {
+    display: block; /* Exibe o contêiner */
+    opacity: 1; /* Torna o contêiner visível */
+}
+
+.video-container.hide {
+    animation: fadeOut 0.5s ease-in-out; /* Animação de desaparecimento */
+}
+
+video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Estilo para as letras */
+.letra {
+    position: absolute;
+    cursor: pointer;
+    /* Adicione estilos adicionais conforme necessário */
+}
