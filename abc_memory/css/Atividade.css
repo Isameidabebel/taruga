@@ -292,7 +292,7 @@
   /*gif tras*/
   .divStart-quiz {
     border-radius: 25px;
-    background-image: url('./imagens/GifBack.gif');
+    background-image: url('../imgs/GifBack.gif');
     background-size: cover;
     /* Faz a imagem cobrir todo o elemento */
     background-position: center;

@@ -99,7 +99,7 @@ function selectAnswer(event) {
 }
 
 function finishGame() {
-  tituloGato.textContent = "Vamos continuar?";
+  tituloGato.textContent = " ";
   tituloGato.style.color = 'black';
   $imagemCE.classList.add("esconder")
   $imagemCE.classList.remove("mostrar") 
@@ -135,7 +135,7 @@ function finishGame() {
       <span>Resultado: ${message}</span>
     </p>
     <button 
-      onclick="window.location.href='../html/proximapagina.html'" 
+      onclick="window.location.href='../html/parabens.html'" 
       class="button"
     >
       Continuar
@@ -207,6 +207,22 @@ const questions = [
       { image: "../imgs/xLibras.jpg", text: "x", correct: false },
       { image: "../imgs/zLibras.jpg", text: "z", correct: true },
       { image: "../imgs/yLibras.jpg", text: "y", correct: false }
+    ]
+  },
+  {
+    question: 'Encontre a carta que representa a letra: E',
+    answers: [
+      { image: "../imgs/oLibras.jpg", text: "o", correct: false },
+      { image: "../imgs/zLibras.jpg", text: "z", correct: false },
+      { image: "../imgs/eLibras.jpg", text: "e", correct: true }
+    ]
+  },
+  {
+    question: 'Encontre a carta que representa a letra: Y',
+    answers: [
+      { image: "../imgs/uLibras.jpg", text: "u", correct: false },
+      { image: "../imgs/wLibras.jpg", text: "w", correct: false },
+      { image: "../imgs/yLibras.jpg", text: "y", correct: true }
     ]
   },
 ]

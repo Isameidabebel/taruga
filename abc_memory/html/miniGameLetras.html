@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo das Letras</title>
+    <link rel="stylesheet" href="../css/miniGameLetras.css">
+</head>
+
+<body>
+    <header>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <nav class="desenvolvido">
+            <a href="index.html">
+                <ul class="menu">
+                    <img src="../imgs/turtle.png" alt="logozinho de uma tartaruga">
+                </ul>
+            </a>
+            <div class="desenvolvido-letras">
+                Desenvolvido por<strong>Beemay</strong>
+            </div>
+        </nav>
+    </header>
+
+    <div class="containerGame">
+        <div class="game-container">
+            <img src="../imgs/1.png" alt="Imagem de fundo" class="background-image">
+
+            <!-- Letras escondidas como imagens pequenas -->
+            <img src="../imgs/aLibras.jpg" alt="Letra A" class="letra" id="letra-a" data-video="../videos/A.mp4">
+            <img src="../imgs/eLibras.jpg" alt="Letra B" class="letra" id="letra-e" data-video="../videos/E.mp4">
+            <img src="../imgs/iLibras.jpg" alt="Letra C" class="letra" id="letra-i" data-video="../videos/I.mp4">
+            <img src="../imgs/oLibras.jpg" alt="Letra D" class="letra" id="letra-o" data-video="../videos/O.mp4">
+            <img src="../imgs/uLibras.jpg" alt="Letra E" class="letra" id="letra-u" data-video="../videos/U.mp4">
+        </div>
+    </div>
+
+    <!-- Container para exibir o vídeo -->
+    <div class="video-container hideIN" id="video-container">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <video id="video-player" controls></video>
+    </div>
+
+    <script src="../JS/miniGameLetras.js"></script>
+</body>
+
+</html>
