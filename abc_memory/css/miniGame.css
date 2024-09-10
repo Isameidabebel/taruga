@@ -18,6 +18,17 @@
     }
 }
 
+/*Animação do background*/
+@keyframes degrade-animado {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+}
+
 .video-container {
     display: none; /* Inicialmente escondido */
     position: fixed;
@@ -73,8 +84,8 @@ video {
 }
 
 .letra img{
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     border-radius: 25px;
     border: 1px solid black;
     image-rendering: -webkit-optimize-contrast;
@@ -107,7 +118,7 @@ video {
     height: 600px;
     border-radius: 25px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .background{
