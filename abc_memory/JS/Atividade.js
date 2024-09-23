@@ -1,8 +1,5 @@
 
 
-
-
-
 const $startGameButton = document.querySelector(".start-quiz")
 const $nextQuestionButton = document.querySelector(".next-question")
 const $questionsContainer = document.querySelector(".questions-container")
