@@ -1,237 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parabéns!</title>
-    <style>
-        @keyframes mudancaDeCor {
-            0% {
-                color: red;
-            }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parabéns!</title>
 
-            50% {
-                color: blue;
-            }
-
-            100% {
-                color: green;
-            }
-        }
-
-        .texto-animado {
-            animation: mudancaDeCor 3s infinite;
-            /* Animação que dura 3 segundos e é infinita */
-        }
-
-        .divAbsolute{
-            width: 600px;
-            height: 100px;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 340px;
-        }
-
-        @keyframes botao {
-            0% {
-                transform: scale(1.0);
-            }
-
-            100% {
-                transform: scale(0.9);
-            }
-        }
-
-        @keyframes degrade-animado {
-            0% {
-                background-position-x: 0%;
-            }
-
-            100% {
-                background-position-x: 100%;
-            }
-        }
-
-        /*animação de fade*/
-        .pulseScale {
-            animation: pulseScale 0.8s ease-in-out forwards;
-        }
-
-        @keyframes pulseScale {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(0.5);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
-            background-image: linear-gradient(to left, rgb(239, 255, 182), rgb(198, 238, 194), rgb(127, 252, 116));
-            background-size: 500% 100%;
-            animation: degrade-animado 5s infinite alternate;
-        }
-
-        .star {
-            transform-style: preserve-3d;
-            width: 1px;
-            height: 1px;
-            position: absolute;
+<style>
+    @keyframes mudancaDeCor {
+        0% {
             color: red;
         }
 
-        .star:before {
-            position: absolute;
-            content: "✦";
-            color: inherit;
-            inset: 0;
-            text-shadow: 0 0 0.8em #fff5;
+        50% {
+            color: blue;
         }
 
-        /*Cabeçalho*/
-        header {
-            width: 100%;
-            height: 60px;
-            flex-shrink: 0;
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
-            background: #36C299;
-            display: flex;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.80);
+        100% {
+            color: green;
+        }
+    }
+
+    .texto-animado {
+        /*animation: mudancaDeCor 3s infinite;*/
+        animation: backInDown, mudancaDeCor 3s infinite;
+        animation-duration: 2s; 
+        cursor: pointer;
+    }
+
+    .divAbsolute {
+        width: 600px;
+        height: 100px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 280px;
+    }
+
+    .divAbsolute p{
+        font-size: 25px;
+    }
+
+    @keyframes botao {
+        0% {
+            transform: scale(1.0);
         }
 
-        .desenvolvido {
-            justify-content: left;
-            align-items: right;
-            display: flex;
-            font-family: Jost;
-            width: 100%;
+        100% {
+            transform: scale(0.9);
+        }
+    }
+
+    @keyframes degrade-animado {
+        0% {
+            background-position-x: 0%;
         }
 
-        .desenvolvido-letras {
-            justify-content: right;
-            align-items: center;
-            display: flex;
-            font-family: Jost;
-            width: 100%;
-            height: 60px;
-            margin-right: 30px;
+        100% {
+            background-position-x: 100%;
+        }
+    }
+
+    /*animação de fade*/
+    .pulseScale {
+        animation: pulseScale 0.8s ease-in-out forwards;
+    }
+
+    @keyframes pulseScale {
+        0% {
+            transform: scale(1);
         }
 
-        .desenvolvido strong {
-
-            margin-left: 7px;
-            font-family: Jost;
+        50% {
+            transform: scale(0.5);
         }
 
-        .menu {
-            display: flex;
-            margin-top: 2px;
-            justify-content: left;
-            align-items: center;
-            height: 60px;
-            list-style: none;
-            text-align: left;
+        100% {
+            transform: scale(1);
         }
+    }
 
-        .menu img {
-            height: 90px;
-            width: 90px;
-            margin-right: 20px;
-            margin-top: 15px;
-            display: flex;
-            animation-name: botao;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-            box-shadow: 1px rgba(40, 216, 113, 0.5);
-        }
+    body {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        background-image: linear-gradient(to left, rgb(239, 255, 182), rgb(198, 238, 194), rgb(127, 252, 116));
+        background-size: 500% 100%;
+        animation: degrade-animado 5s infinite alternate;
+    }
 
-        /*Fim cabeçalho*/
-        .divCentralizaElementos {
-            width: 100%;
-            height: 500px;
-            align-items: center;
-            justify-content: center;
-            display: grid;
-            background: blue;
-            cursor: url('../imgs/Cursor.jfif'), auto;
-        }
+    .star {
+        transform-style: preserve-3d;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        color: red;
+    }
 
-        .containerTrofeu {
-            width: 600px;
-            height: 450px;
-            background: white;
-            border-radius: 25px;
-            border: 1px solid white;
-            overflow: hidden;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
+    .star:before {
+        position: absolute;
+        content: "✦";
+        color: inherit;
+        inset: 0;
+        text-shadow: 0 0 0.8em #fff5;
+    }
 
-        .hidden {
-            display: none;
-        }
+    /*Cabeçalho*/
+    header {
+        width: 100%;
+        height: 60px;
+        flex-shrink: 0;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        background: #36C299;
+        display: flex;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.80);
+    }
 
-        .imgTrofeu {
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: pixelated;
-            height: 350px;
-            scale: 0;
-        }
+    .desenvolvido {
+        justify-content: left;
+        align-items: right;
+        display: flex;
+        font-family: Jost;
+        width: 100%;
+    }
 
-        /*Button*/
-        .divButton {
-            width: 100%;
-            height: 80px;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            background: pink;
-        }
+    .desenvolvido-letras {
+        justify-content: right;
+        align-items: center;
+        display: flex;
+        font-family: Jost;
+        width: 100%;
+        height: 60px;
+        margin-right: 30px;
+    }
 
-        .cssButtons {
-            cursor: pointer;
-            background: #36c299;
-            border-radius: 30px;
-            border: 1px solid #fff;
-            height: 55px;
-            width: 220px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 25px;
-            font-family: Jost;
-            transition: background-color 0.3s, transform 0.2s;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
+    .desenvolvido strong {
 
-        .cssButtons:hover {
-            animation-name: botao;
-            animation-duration: 0.5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-            box-shadow: 1px rgba(40, 216, 113, 0.5);
-        }
-    </style>
+        margin-left: 7px;
+        font-family: Jost;
+    }
+
+    .menu {
+        display: flex;
+        margin-top: 2px;
+        justify-content: left;
+        align-items: center;
+        height: 60px;
+        list-style: none;
+        text-align: left;
+    }
+
+    .menu img {
+        height: 90px;
+        width: 90px;
+        margin-right: 20px;
+        margin-top: 15px;
+        display: flex;
+        animation-name: botao;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        box-shadow: 1px rgba(40, 216, 113, 0.5);
+    }
+
+    /*Fim cabeçalho*/
+    .divCentralizaElementos {
+        width: 100%;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        background: blue;
+        cursor: url('../imgs/Cursor.jfif'), auto;
+    }
+
+    .containerTrofeu {
+        width: 600px;
+        height: 450px;
+        background: white;
+        border-radius: 25px;
+        border: 1px solid white;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .imgTrofeu {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+        height: 350px;
+        animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; 
+        cursor: pointer;
+    }
+
+    /*Button*/
+    .divButton {
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background: pink;
+    }
+
+    .cssButtons {
+        cursor: pointer;
+        background: #36c299;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        height: 55px;
+        width: 220px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: Jost;
+        transition: background-color 0.3s, transform 0.2s;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .cssButtons:hover {
+        animation-name: botao;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        box-shadow: 1px rgba(40, 216, 113, 0.5);
+    }
+</style>
 </head>
-
 <body>
     <header>
         <div vw class="enabled">
@@ -258,7 +267,7 @@
 
     <div class="divCentralizaElementos">
         <div class="containerTrofeu">
-            <img class="imgTrofeu" src="../imgs/TrofeuImg.png" alt="TroféuImg">
+            <img class="imgTrofeu" src="../imgs/Trofeu.gif" alt="TroféuImg">
             <div class="divAbsolute">
                 <p class="texto-animado">Parabéns</p>
             </div>
@@ -306,11 +315,6 @@
                 y1 = clientY;
             }
         });
-
-        //imgs
-        const trofeu = document.getElementsByClassName('imgTrofeu');
-        //load 
-
 
     </script>
 </body>
