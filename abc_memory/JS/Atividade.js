@@ -206,4 +206,20 @@ const questions = [
       { image: "../imgs/yLibras.jpg", text: "y", correct: false }
     ]
   },
+  {
+    question: 'Encontre a carta que representa a letra: Q',
+    answers: [
+      { image: "../imgs/eLibras.jpg", text: "e", correct: false },
+      { image: "../imgs/tLibras.jpg", text: "t", correct: false },
+      { image: "../imgs/qLibras.jpg", text: "q", correct: true }
+    ]
+  },
+  {
+    question: 'Encontre a carta que representa a letra: K',
+    answers: [
+      { image: "../imgs/nLibras.jpg", text: "n", correct: false },
+      { image: "../imgs/kLibras.jpg", text: "k", correct: true },
+      { image: "../imgs/jLibras.jpg", text: "j", correct: false }
+    ]
+  },
 ]
