@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfabeto em Libras</title>
+    <link rel="stylesheet" href="../css/primaryScreen.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <nav class="desenvolvido">
+            <a href="index.html">
+                <ul class="menu">
+                    <img src="../imgs/turtle.png"
+                        alt="logozinho de uma tartaruga">
+                </ul>
+            </a>
+
+            <div class="desenvolvido-letras">
+                Desenvolvido por<strong>Beemay</strong>
+            </div>
+        </nav>
+    </header>
+    <div class="divTitulo">
+        <h1>Vamos observar o alfabeto!?</h1>
+    </div>
+
+    <div class="container">
+        <div class="video-container">
+            <div id="videoElement" class="video"><video src="../videos/Alfabeto Completo.mp4" controls poster="../imgs/abcThumb.jpg"></video></div>
+        </div>
+    </div>
+    <div class="divButton">
+        <button id="continueButton">Continuar</button>
+    </div>
+    <script>
+        const continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', () => {
+            window.location.href = '../html/secondaryScreen.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
+    </script>
+</body>
+
+
+</html>

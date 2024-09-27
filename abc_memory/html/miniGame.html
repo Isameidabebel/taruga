@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Letras e Vídeos</title>
+    <link rel="stylesheet" href="../css/miniGame.css">
+</head>
+
+<body>
+    <header>
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <nav class="desenvolvido">
+          <a href="index.html">
+            <ul class="menu">
+              <img src="../imgs/turtle.png" alt="logozinho de uma tartaruga">
+            </ul>
+          </a>
+          <div class="desenvolvido-letras">
+            Desenvolvido por<strong>Beemay</strong>
+          </div>
+        </nav>
+      </header>
+      <div class="divTitulo">
+        <h1>Ache as letras!</h1>
+    </div>
+    <div class="container">
+        <div class="game-container">
+            <img class="background" src="../imgs/Bg_Game.png" alt="Imagem de fundo" class="background-image">
+            <div class="letra" data-video="../videos/A.mp4">
+                <img src="../imgs/aLibras.jpg" alt="Letra A">
+            </div>
+            <div class="letra" data-video="../videos/E.mp4">
+                <img src="../imgs/eLibras.jpg" alt="Letra E">
+            </div>
+            <div class="letra" data-video="../videos/I.mp4">
+                <img src="../imgs/iLibras.jpg" alt="Letra I">
+            </div>
+            <div class="letra" data-video="../videos/O.mp4">
+                <img src="../imgs/oLibras.jpg" alt="Letra O">
+            </div>
+            <div class="letra" data-video="../videos/U.mp4">
+                <img src="../imgs/uLibras.jpg" alt="Letra U">
+            </div>
+        </div>
+    </div>
+    <!-- Contêiner do vídeo -->
+    <div class="video-container" id="video-container">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <video id="video-player" controls></video>
+    </div>
+
+    <script src="../JS/miniGame.js"></script>
+</body>
+
+</html>
