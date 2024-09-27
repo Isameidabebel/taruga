@@ -289,11 +289,15 @@
         </div>
     </div>
     <div class="divButton">
-        <button class="cssButtons">Continuar</button>
+        <button id="continueButton" class="cssButtons">Continuar</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
+        const continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', () => {
+            window.location.href = '../html/préAtividade.html'; // Substitua 'outraPagina.html' pela URL desejada
+        });
         //Confetti button
         document.getElementsByClassName("imgTrofeu")[0].addEventListener("click", () => {
             confetti();
@@ -336,8 +340,6 @@
                 y1 = clientY;
             }
         });
-
     </script>
 </body>
-
 </html>
