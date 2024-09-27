@@ -112,16 +112,16 @@ function finishGame() {
 
   switch (true) {
     case (performance >= 90):
-      message = "Excelente :)"
+      message = "Excelente! >-<"
       break
     case (performance >= 70):
-      message = "Muito bom :)"
+      message = "Muito bom >wO"
       break
-    case (performance >= 40):
-      message = "Bom"
+    case (performance >= 50):
+      message = "Bom ^-^"
       break
     default:
-      message = "Pode melhorar :("
+      message = "Pode melhorar (T_T)"
   }
 
   $questionsContainer.innerHTML =
