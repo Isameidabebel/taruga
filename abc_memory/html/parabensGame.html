@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -25,7 +26,7 @@
     .texto-animado {
         /*animation: mudancaDeCor 3s infinite;*/
         animation: backInDown, mudancaDeCor 3s infinite;
-        animation-duration: 2s; 
+        animation-duration: 2s;
         cursor: pointer;
     }
 
@@ -39,7 +40,7 @@
         margin-top: 280px;
     }
 
-    .divAbsolute p{
+    .divAbsolute p {
         font-size: 25px;
     }
 
@@ -49,7 +50,7 @@
         }
 
         100% {
-            transform: scale(0.9);
+            transform: scale(1.2);
         }
     }
 
@@ -60,25 +61,6 @@
 
         100% {
             background-position-x: 100%;
-        }
-    }
-
-    /*animação de fade*/
-    .pulseScale {
-        animation: pulseScale 0.8s ease-in-out forwards;
-    }
-
-    @keyframes pulseScale {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(0.5);
-        }
-
-        100% {
-            transform: scale(1);
         }
     }
 
@@ -174,20 +156,54 @@
         align-items: center;
         justify-content: center;
         display: grid;
-        background: blue;
         cursor: url('../imgs/Cursor.jfif'), auto;
     }
 
     .containerTrofeu {
+        position: relative;
         width: 600px;
         height: 450px;
         background: white;
         border-radius: 25px;
-        border: 1px solid white;
         overflow: hidden;
         align-items: center;
         display: flex;
         justify-content: center;
+        -ms-align-items: center;
+        border: 1px solid rgb(94, 65, 2);
+    }
+
+    .containerTrofeu img {
+        z-index: 2
+    }
+
+    .containerTrofeu::before {
+        border-radius: 25px;
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 170%;
+        background: linear-gradient(rgb(0, 255, 132), #0b9891, #36C299, yellow);
+        animation: rotate 4s linear infinite;
+        overflow: hidden;
+    }
+
+    .containerTrofeu::after {
+        content: '';
+        position: absolute;
+        background: white;
+        inset: 5px;
+        border-radius: 25px;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     .hidden {
@@ -199,8 +215,9 @@
         image-rendering: -moz-crisp-edges;
         image-rendering: pixelated;
         height: 350px;
-        animation: backInDown; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 2s; 
+        animation: backInDown;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s;
         cursor: pointer;
     }
 
@@ -211,7 +228,6 @@
         align-items: center;
         justify-content: center;
         display: flex;
-        background: pink;
     }
 
     .cssButtons {
@@ -229,6 +245,7 @@
         align-items: center;
         justify-content: center;
         display: flex;
+        margin-bottom: 25px;
     }
 
     .cssButtons:hover {
@@ -241,6 +258,7 @@
     }
 </style>
 </head>
+
 <body>
     <header>
         <div vw class="enabled">
@@ -267,17 +285,20 @@
 
     <div class="divCentralizaElementos">
         <div class="containerTrofeu">
-            <img class="imgTrofeu" src="../imgs/Trofeu.gif" alt="TroféuImg">
-            <div class="divAbsolute">
-                <p class="texto-animado">Parabéns</p>
-            </div>
+            <img class="imgTrofeu" src="../imgs/TrofeuImg.gif" alt="TroféuImg">
         </div>
     </div>
     <div class="divButton">
-        <button class="cssButtons">djsbad</button>
+        <button class="cssButtons">Continuar</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
+        //Confetti button
+        document.getElementsByClassName("imgTrofeu")[0].addEventListener("click", () => {
+            confetti();
+        });
+
         let x1 = 0, y1 = 0;
 
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
