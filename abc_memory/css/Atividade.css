@@ -399,4 +399,40 @@
         transform: translateY(0);
     }
   }
+
+  /*Barra de progresso*/
+  #progress-container {
+    width: 50%;
+    background-color: #e0e0e0;
+    margin: 20px auto; /* centraliza a barra */
+    height: 30px;
+    position: relative;
+    border-radius: 25px; /* bordas arredondadas */
+    transition: width 1s ease; 
+    border: #000 solid 1px;
+  }
+  
+  #progress-bar {
+    width: 0%; /* Começa em 0% */
+    height: 100%;
+    background-color: #4caf50; /* cor da barra */
+    transition: width 1s ease; /* animação suave */
+    position: relative;
+    border-radius: 25px; /* bordas arredondadas */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  #progress-value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    transition: width 1s ease; 
+  }
+  
+  
   

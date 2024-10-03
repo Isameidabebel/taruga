@@ -10,7 +10,8 @@ const $imagemContainerErrado = document.querySelector(".imagemCerta")
 const $imagemContainerCerto = document.querySelector(".imagemErrada")
 const $imagemCE = document.querySelector(".imagemCE")
 const $imagemCongratulations = document.querySelector(".imagemCongratulations")
-const tituloGato = document.getElementById("tituloGato"); 
+const tituloGato = document.getElementById("tituloGato");
+const progressBar = document.getElementById("progress-container");
 
 
 let currentQuestionIndex = 0
@@ -96,17 +97,26 @@ function selectAnswer(event) {
 }
 
 function finishGame() {
-  tituloGato.textContent = "Vamos continuar?";
+  tituloGato.textContent = " ";
   tituloGato.style.color = 'black';
   $imagemCE.classList.add("esconder")
-  $imagemCE.classList.remove("mostrar") 
+  $imagemCE.classList.remove("mostrar")
+
+  // Mostrar a barra de progresso
+  progressBar.classList.remove("esconder")
+  progressBar.classList.add("mostrar")
+
   /*Congratulations*/
   $imagemCongratulations.classList.remove("esconder")
   $imagemCongratulations.classList.add("mostrar")
   $imagemCongratulations.classList.add("imagem-pulando")
 
+
   const totalQuestions = questions.length
   const performance = Math.floor(totalCorrect * 100 / totalQuestions)
+
+  // Atualizando a barra de progresso com a pontuação
+  animarBarraDeProgresso(performance);
 
   let message = ""
 
@@ -132,12 +142,33 @@ function finishGame() {
       <span>Resultado: ${message}</span>
     </p>
     <button 
-      onclick="window.location.href='../html/parabensAtividade.html'" 
+      onclick="window.location.href='../html/modulos.html'" 
       class="button"
     >
       Continuar
     </button>
   `
+}
+
+// Função para animar a barra de progresso
+function animarBarraDeProgresso(pontuacao) {
+  const progressBar = document.getElementById("progress-bar"); // Altere para o ID correto
+  let currentWidth = 0; // Inicializa a largura atual da barra
+  const targetWidth = pontuacao; // A largura desejada da barra
+  const increment = 1; // A quantidade a ser incrementada a cada intervalo
+  const duration = 1000; // Duração total da animação em milissegundos
+  const intervalTime = duration / targetWidth; // Tempo entre os incrementos
+
+  // Define a animação da barra
+  const interval = setInterval(() => {
+    if (currentWidth < targetWidth) {
+      currentWidth += increment; // Incrementa a largura atual
+      progressBar.style.width = `${currentWidth}%`; // Atualiza a largura da barra
+      progressBar.innerText = `${currentWidth}%`; // Atualiza o texto dentro da barra
+    } else {
+      clearInterval(interval); // Para o intervalo quando a largura desejada é atingida
+    }
+  }, intervalTime);
 }
 
 const questions = [
