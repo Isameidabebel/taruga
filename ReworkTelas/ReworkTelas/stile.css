@@ -1,0 +1,603 @@
+@font-face {
+    font-family: 'Jersey';
+    src: url('Fonts/Jersey.ttf') format('truetype');
+    /* Ajuste o caminho da fonte */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.jersey-text {
+    font-family: 'Jersey', sans-serif;
+    /* Aplica a fonte Jersey */
+}
+
+.container1 {
+    width: 100%;
+    height: 100vh;
+    background: #D7FBBC;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+    background: #E8AEFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.direita {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.direita img {
+    width: 800px;
+    height: 70%;
+}
+
+.alignButton {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.esquerda {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos do botão */
+.buttonStyle {
+    cursor: pointer;
+    background: #9DDF48;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    height: 55px;
+    width: 255px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Jost, sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animação do botão */
+.buttonStyle:hover {
+    animation-name: botao;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    box-shadow: 1px #36C299;
+    background: #598a18;
+    transition: 0.5s;
+}
+
+.animatedBackInDown {
+    animation: backInDown 2s;
+}
+
+.animatedPulse {
+    animation: pulse 2s infinite;
+}
+
+.seta {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.seta img {
+    width: 170px;
+    height: 100px;
+}
+
+/*Carrosel inicio*/
+.carousel-inner {
+    height: 450px;
+    overflow: hidden;
+    border: black 1px solid;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.divDestaquesDaSemana {
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.destaquesDaSemana {
+    width: 450px;
+    height: 45px;
+    border-radius: 25px;
+    border: 2px solid black;
+    background-color: #FF007A;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+@keyframes botao {
+    0% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes mostra {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+/*Responsividade carrosel*/
+/*Responsividade1 ----------------------------------------------------------------------------*/
+@media screen and (min-width: 1px) and (max-width:376px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img1 {
+        content: url('imgs/1_Small.png');
+    }
+
+    #divJuan {
+        height: 365px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:540px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img1 {
+        content: url('imgs/1_Small.png');
+    }
+
+    #divJuan {
+        height: 465px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img1 {
+        content: url('imgs/1_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img1 {
+        content: url('imgs/1_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+/*Carrosel*/
+@media screen and (min-width: 767px) and (max-width: 991px)
+/*Diminuir Carrosel*/
+    {
+    #divJuan {
+        height: 290px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    /*Diminuir Cabeçalho*/
+    #divJuan {
+        height: 390px;
+        overflow: hidden;
+    }
+}/*Fim*/
+/*Responsividade2 ----------------------------------------------------------------------------*/
+@media screen and (min-width: 1px) and (max-width:376px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img2 {
+        content: url('imgs/2_Small.png');
+    }
+
+    #divJuan {
+        height: 365px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:540px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img2 {
+        content: url('imgs/2_Small.png');
+    }
+
+    #divJuan {
+        height: 465px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img2 {
+        content: url('imgs/2_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img2 {
+        content: url('imgs/2_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+/*Fim*/
+/*Responsividade3 ----------------------------------------------------------------------------*/
+@media screen and (min-width: 1px) and (max-width:376px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img3 {
+        content: url('imgs/3_Small.png');
+    }
+
+    #divJuan {
+        height: 365px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:540px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img3 {
+        content: url('imgs/3_Small.png');
+    }
+
+    #divJuan {
+        height: 465px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img3 {
+        content: url('imgs/3_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img3 {
+        content: url('imgs/3_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+/*Fim*/
+/*Responsividade4 ----------------------------------------------------------------------------*/
+@media screen and (min-width: 1px) and (max-width:376px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img4 {
+        content: url('imgs/4_Small.png');
+    }
+
+    #divJuan {
+        height: 365px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:540px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img4 {
+        content: url('imgs/4_Small.png');
+    }
+
+    #divJuan {
+        height: 465px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img4 {
+        content: url('imgs/4_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img4 {
+        content: url('imgs/4_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+/*Fim*/
+/*Responsividade5 ----------------------------------------------------------------------------*/
+@media screen and (min-width: 1px) and (max-width:376px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img5 {
+        content: url('imgs/5_Small.png');
+    }
+
+    #divJuan {
+        height: 365px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:540px)
+/*Mudar IMG Carrosel*/
+    {
+    #Img5 {
+        content: url('imgs/5_Small.png');
+    }
+
+    #divJuan {
+        height: 465px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img5 {
+        content: url('imgs/5_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px)
+/*Mudar IMG Carrosel*/
+    {
+        #Img5 {
+        content: url('imgs/5_Small.png');
+    }
+
+    #divJuan {
+        height: 680px;
+        overflow: hidden;
+        border: black 1px solid;
+    }
+}
+/*Fim*/
+
+/*Responsividade containers*/
+@media screen and (min-width: 550px) and (max-width: 1000px) {
+    #container1 {
+        width: auto;
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+        height: 100%;
+    }
+
+    .esquerda {
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita img {
+        margin-bottom: 120px;
+    }
+
+}
+
+@media screen and (min-width: 1px) and (max-width: 766px) {
+    .container2 {
+        width: auto;
+        height: 750px;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 550px) {
+    #container1 {
+        width: auto;
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+        height: 100%;
+    }
+
+    .esquerda {
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .esquerda img {
+        height: 200px;
+        width: 400px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita img {
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 440px) {
+    #container1 {
+        width: auto;
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+        height: 100%;
+    }
+
+    .esquerda {
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .esquerda img {
+        height: 150px;
+        width: 300px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .direita img {
+        margin-bottom: 200px;
+    }
+}
