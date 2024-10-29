@@ -11,18 +11,28 @@ body {
   }
   
   .module:nth-child(odd) .module-title {
-    background-color: #4B9CD3;
+    background-color: #607AD6;
   }
   
   .module:nth-child(even) .module-title {
-    background-color: #F28B82;
+    background-color: #DB664C;
   }
   
   .card {
-    border: none;
+    border: 2px solid white;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0.5rem;
+    overflow: hidden;
+    width: 150px;
+    height: 120px;
+  }
+
+  .card:hover {
+    border: 1px solid white;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.2s;
   }
   
   .card-body {
@@ -31,7 +41,37 @@ body {
     font-weight: bold;
     color: #fff;
     border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    padding: 0px;
+    width: 150px;
+    height: 120px;
+    position: relative;
   }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    padding: 0.5rem;
+    border-radius: 5px; 
+    z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.404); 
+  border-radius: 10px; 
+  z-index: 1; 
+}
   
   .bg-warning {
     background-color: #FFEB3B !important;
