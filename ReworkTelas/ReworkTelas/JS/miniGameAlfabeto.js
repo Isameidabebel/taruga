@@ -7,7 +7,7 @@ function gerarPosicaoAleatoria() {
 function verificarSeTodasLetrasForamEncontradas() {
     const letrasRestantes = document.querySelectorAll('.letra');
     if (letrasRestantes.length === 0) {
-        window.location.href = '../Htmls/parabensGameAlfabeto.html'; 
+        window.location.href = '../../Htmls/AtividadeAlfabeto/parabensGameAlfabeto.html'; 
     }
 }
 

@@ -142,7 +142,7 @@ function finishGame() {
       <span>Resultado: ${message}</span>
     </p>
     <button 
-      onclick="window.location.href='../Htmls/modulos.html'" 
+      onclick="window.location.href='../../Htmls/modules.html'" 
       class="button"
     >
       Continuar
