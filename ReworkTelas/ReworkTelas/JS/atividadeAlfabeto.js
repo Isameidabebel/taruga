@@ -142,7 +142,7 @@ function finishGame() {
       <span>Resultado: ${message}</span>
     </p>
     <button 
-      onclick="window.location.href='../html/modulos.html'" 
+      onclick="window.location.href='../Htmls/modulos.html'" 
       class="button"
     >
       Continuar
@@ -175,82 +175,82 @@ const questions = [
   {
     question: "Encontre a carta que representa a letra: A",
     answers: [
-      { image: "../imgs/aLibras.jpg", text: "a", correct: true },
-      { image: "../imgs/cLibras.jpg", text: "c", correct: false },
-      { image: "../imgs/bLibras.jpg", text: "b", correct: false }
+      { image: "../../Imgs/aLibras.jpg", text: "a", correct: true },
+      { image: "../../Imgs/cLibras.jpg", text: "c", correct: false },
+      { image: "../../Imgs/bLibras.jpg", text: "b", correct: false }
 
     ]
   },
   {
     question: "Encontre a carta que representa a letra: G",
     answers: [
-      { image: "../imgs/fLibras.jpg", text: "f", correct: false },
-      { image: "../imgs/gLibras.jpg", text: "g", correct: true },
-      { image: "../imgs/eLibras.jpg", text: "e", correct: false }
+      { image: "../../Imgs/fLibras.jpg", text: "f", correct: false },
+      { image: "../../Imgs/gLibras.jpg", text: "g", correct: true },
+      { image: "../../Imgs/eLibras.jpg", text: "e", correct: false }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: I',
     answers: [
-      { image: "../imgs/hLibras.jpg", text: 'h', correct: false },
-      { image: "../imgs/kLibras.jpg", text: 'k', correct: false },
-      { image: "../imgs/iLibras.jpg", text: 'i', correct: true }
+      { image: "../../Imgs/hLibras.jpg", text: 'h', correct: false },
+      { image: "../../Imgs/kLibras.jpg", text: 'k', correct: false },
+      { image: "../../Imgs/iLibras.jpg", text: 'i', correct: true }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: M',
     answers: [
-      { image: "../imgs/lLibras.jpg", text: "l", correct: false },
-      { image: "../imgs/mLibras.jpg", text: "m", correct: true },
-      { image: "../imgs/nLibras.jpg", text: "n", correct: false }
+      { image: "../../Imgs/lLibras.jpg", text: "l", correct: false },
+      { image: "../../Imgs/mLibras.jpg", text: "m", correct: true },
+      { image: "../../Imgs/nLibras.jpg", text: "n", correct: false }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: O',
     answers: [
-      { image: "../imgs/oLibras.jpg", text: "o", correct: true },
-      { image: "../imgs/qLibras.jpg", text: "q", correct: false },
-      { image: "../imgs/pLibras.jpg", text: "p", correct: false }
+      { image: "../../Imgs/oLibras.jpg", text: "o", correct: true },
+      { image: "../../Imgs/qLibras.jpg", text: "q", correct: false },
+      { image: "../../Imgs/pLibras.jpg", text: "p", correct: false }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: R',
     answers: [
-      { image: "../imgs/tLibras.jpg", text: "t", correct: false },
-      { image: "../imgs/sLibras.jpg", text: "s", correct: false },
-      { image: "../imgs/rLibras.jpg", text: "r", correct: true }
+      { image: "../../Imgs/tLibras.jpg", text: "t", correct: false },
+      { image: "../../Imgs/sLibras.jpg", text: "s", correct: false },
+      { image: "../../Imgs/rLibras.jpg", text: "r", correct: true }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: U',
     answers: [
-      { image: "../imgs/vLibras.jpg", text: "v", correct: false },
-      { image: "../imgs/wLibras.jpg", text: "w", correct: false },
-      { image: "../imgs/uLibras.jpg", text: "u", correct: true }
+      { image: "../../Imgs/vLibras.jpg", text: "v", correct: false },
+      { image: "../../Imgs/wLibras.jpg", text: "w", correct: false },
+      { image: "../../Imgs/uLibras.jpg", text: "u", correct: true }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: Z',
     answers: [
-      { image: "../imgs/xLibras.jpg", text: "x", correct: false },
-      { image: "../imgs/zLibras.jpg", text: "z", correct: true },
-      { image: "../imgs/yLibras.jpg", text: "y", correct: false }
+      { image: "../../Imgs/xLibras.jpg", text: "x", correct: false },
+      { image: "../../Imgs/zLibras.jpg", text: "z", correct: true },
+      { image: "../../Imgs/yLibras.jpg", text: "y", correct: false }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: Q',
     answers: [
-      { image: "../imgs/eLibras.jpg", text: "e", correct: false },
-      { image: "../imgs/tLibras.jpg", text: "t", correct: false },
-      { image: "../imgs/qLibras.jpg", text: "q", correct: true }
+      { image: "../../Imgs/eLibras.jpg", text: "e", correct: false },
+      { image: "../../Imgs/tLibras.jpg", text: "t", correct: false },
+      { image: "../../Imgs/qLibras.jpg", text: "q", correct: true }
     ]
   },
   {
     question: 'Encontre a carta que representa a letra: K',
     answers: [
-      { image: "../imgs/nLibras.jpg", text: "n", correct: false },
-      { image: "../imgs/kLibras.jpg", text: "k", correct: true },
-      { image: "../imgs/jLibras.jpg", text: "j", correct: false }
+      { image: "../../Imgs/nLibras.jpg", text: "n", correct: false },
+      { image: "../../Imgs/kLibras.jpg", text: "k", correct: true },
+      { image: "../../Imgs/jLibras.jpg", text: "j", correct: false }
     ]
   },
 ]

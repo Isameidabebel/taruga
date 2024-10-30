@@ -154,3 +154,35 @@ body {
   cursor: pointer;
   transition: 0.2s;
 }
+
+.seta{
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  height: 70px;
+  width: 70px;
+  margin-top: 20px;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+.seta a{
+  color: inherit;
+}
+
+.iconSeta{
+  color: #267E64;
+}
+
+.seta:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+  .seta{
+    margin-left: 10px;
+  }
+}
